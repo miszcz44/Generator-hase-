@@ -1,0 +1,5 @@
+Użytkownik podaje liczbę znaków w haśle i liczbę każdego pojedynczego rodzaju znaku
+Kolejne podawane liczby nie mogą przekroczyć początkowej liczby znaków
+W haśle musi wystąpić conajmniej 1 znak każdego rodzaju
+W razie niewykorzystania wszystkich liter hasło powinno zostać uzupełnione małymi literami
+Generacja losowego hasła zgodnie z danymi od użytkownika
