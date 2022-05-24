@@ -1,3 +1,19 @@
+import random
+import string
+import time
+
+def Generate_password():
+     password = []
+     for _ in range(int(lowercase_letters_number)):
+          password.append(random.choice(string.ascii_lowercase))
+     for _ in range(int(uppercase_letters_number)):
+          password.append(random.choice(string.ascii_uppercase))
+     for _ in range(int(digit_number)):
+          password.append(random.choice(string.digits))
+     for _ in range(int(special_characters_number)):
+          password.append(random.choice(string.punctuation))
+     random.shuffle(password)
+     return password
 def Info_about_number_not_in_range(number):
      if(number.isdecimal() == False):
           print("Looks like you did not enter a positive integer. Try again")
@@ -43,5 +59,16 @@ special_characters_number = Loop_to_get_the_right_input(special_characters_numbe
 
 if(characters_left>0):
      lowercase_letters_number = str(int(lowercase_letters_number) + characters_left)
+     print("The " + str(characters_left) + " left characters have been assigned to lowercase letters")
      characters_left = 0
-print(lowercase_letters_number,uppercase_letters_number,digit_number,special_characters_number)
+
+time.sleep(1.5)
+print("Final review:")
+print("lowercase letters: " + lowercase_letters_number)
+print("uppercase letters: " + uppercase_letters_number)
+print("digits: " + digit_number)
+print("special characters: " + special_characters_number)
+time.sleep(3)
+print("__THE PASSWORD__")
+password = Generate_password()
+print("".join(password))
